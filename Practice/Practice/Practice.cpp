@@ -6,8 +6,8 @@
 
 using namespace std;
 
-int main()
-{
+//int main()
+//{
 	/*
 	{
 		std::cout << "Hello, Wrold!" << std::endl;
@@ -257,5 +257,5 @@ int main()
 	*/
 	
 
-	return 0;
-}
+//	return 0;
+//}
