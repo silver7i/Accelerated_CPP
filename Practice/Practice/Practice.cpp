@@ -50,149 +50,212 @@ int main()
 	
 	// 2-3
 	/*
-	std::cout << "Whar is your name? ";
-	std::string name;
-	std::cin >> name;
-
-	cout << endl;
-
-	const string Greeting = "Hellow " + name + "!";
-
-	unsigned int RowsPad;
-	unsigned int ColumnsPad;
-	cout << "Input Row Pad Size : ";
-	cin >> RowsPad;
-	cout << "Input Column Pad Size : ";
-	cin >> ColumnsPad;
-
-
-	const int Rows = RowsPad * 2 + 3;
-	const string::size_type Columns = Greeting.size() + ColumnsPad * 2 + 2;
-	
-	for (int r = 0; r != Rows; ++r)
 	{
-		string::size_type c = 0;
-		while (c != Columns)
-		{
-			if (r == RowsPad + 1 && c == ColumnsPad + 1)
-			{
-				cout << Greeting;
-				c += Greeting.size();
-			}
-			else
-			{
-				if (r == 0 || r == Rows - 1 || c == 0 || c == Columns - 1)
-				{
-					cout << "*";
-				} 
-				else
-				{
-					cout << " ";
-				}
-				++c;
-			}
-		}
+		std::cout << "Whar is your name? ";
+		std::string name;
+		std::cin >> name;
 
 		cout << endl;
+
+		const string Greeting = "Hellow " + name + "!";
+
+		unsigned int RowsPad;
+		unsigned int ColumnsPad;
+		cout << "Input Row Pad Size : ";
+		cin >> RowsPad;
+		cout << "Input Column Pad Size : ";
+		cin >> ColumnsPad;
+
+
+		const int Rows = RowsPad * 2 + 3;
+		const string::size_type Columns = Greeting.size() + ColumnsPad * 2 + 2;
+	
+		for (int r = 0; r != Rows; ++r)
+		{
+			string::size_type c = 0;
+			while (c != Columns)
+			{
+				if (r == RowsPad + 1 && c == ColumnsPad + 1)
+				{
+					cout << Greeting;
+					c += Greeting.size();
+				}
+				else
+				{
+					if (r == 0 || r == Rows - 1 || c == 0 || c == Columns - 1)
+					{
+						cout << "*";
+					} 
+					else
+					{
+						cout << " ";
+					}
+					++c;
+				}
+			}
+
+			cout << endl;
+		}
 	}
 	*/
 
 	// 2-4
 	/*
-	for (int r = 0; r != Rows; ++r)
 	{
-		string::size_type c = 0;
-		string result;
-		while (c != Columns)
+		for (int r = 0; r != Rows; ++r)
 		{
-			if (r == RowsPad + 1 && c == ColumnsPad + 1)
+			string::size_type c = 0;
+			string result;
+			while (c != Columns)
 			{
-				result += Greeting;
-				c += Greeting.size();
-			}
-			else
-			{
-				if (r == 0 || r == Rows - 1 || c == 0 || c == Columns - 1)
+				if (r == RowsPad + 1 && c == ColumnsPad + 1)
 				{
-					result += "*";
-				} 
+					result += Greeting;
+					c += Greeting.size();
+				}
 				else
 				{
-					result += " ";
+					if (r == 0 || r == Rows - 1 || c == 0 || c == Columns - 1)
+					{
+						result += "*";
+					}
+					else
+					{
+						result += " ";
+					}
+					++c;
 				}
-				++c;
 			}
-		}
-		cout << result;
+			cout << result;
 
-		cout << endl;
+			cout << endl;
+		}
 	}
 	*/
 
 	// 2-5
-	int Rows = 5;
-	int Columns = 5;
-
-	// square
-	for (int row = 0; row != Rows; ++row)
+	/*
 	{
-		string result;
-		for (int column = 0; column != Columns; ++column)
+		int Rows = 5;
+		int Columns = 5;
+
+		// square
+		for (int row = 0; row != Rows; ++row)
 		{
-			if (row == 0 || row == Rows - 1 || column == 0 || column == Columns - 1)
+			string result;
+			for (int column = 0; column != Columns; ++column)
 			{
-				result += "* ";
-			} 
-			else
-			{
-				result += "  ";
+				if (row == 0 || row == Rows - 1 || column == 0 || column == Columns - 1)
+				{
+					result += "* ";
+				}
+				else
+				{
+					result += "  ";
+				}
 			}
+			cout << result << endl;
 		}
-		cout << result << endl;
-	}
 
-	cout << endl;
-
-	// oblong
-	Columns = 3;
-	for (int row = 0; row != Rows; ++row)
-	{
-		string result;
-		for (int column = 0; column != Columns; ++column)
-		{
-			if (row == 0 || row == Rows - 1 || column == 0 || column == Columns - 1)
-			{
-				result += "* ";
-			}
-			else
-			{
-				result += "  ";
-			}
-		}
-		cout << result << endl;
-	}
-
-	cout << endl;
-
-	// triangle
-	int size = 5;
-
-	for (int row = 0; row != size; ++row)
-	{
-		for (int column = 0; column != 2 * size - 1; ++column)
-		{
-			if (column < size - row - 1 || column > size + row - 1)
-			{
-				cout << " ";
-			}
-			else
-			{
-				
-				cout << "*";
-			}
-		}
 		cout << endl;
+
+		// oblong
+		Columns = 3;
+		for (int row = 0; row != Rows; ++row)
+		{
+			string result;
+			for (int column = 0; column != Columns; ++column)
+			{
+				if (row == 0 || row == Rows - 1 || column == 0 || column == Columns - 1)
+				{
+					result += "* ";
+				}
+				else
+				{
+					result += "  ";
+				}
+			}
+			cout << result << endl;
+		}
+
+		cout << endl;
+
+		// triangle
+		int size = 5;
+
+		for (int row = 0; row != size; ++row)
+		{
+			for (int column = 0; column != 2 * size - 1; ++column)
+			{
+				if (column < size - row - 1 || column > size + row - 1)
+				{
+					cout << " ";
+				}
+				else
+				{
+
+					cout << "*";
+				}
+			}
+			cout << endl;
+		}
 	}
+	*/
+
+	// 2-6
+	/*
+	{
+		int i = 0;
+		while (i < 10) {
+			i += 1;
+			cout << i << endl;
+		}
+	}
+	*/
+
+	// 2-7
+	/*
+	{
+		for (int i = 10; i > -6; --i)
+		{
+			cout << i << endl;
+		}
+	}
+	*/
+
+	// 2-8
+	/*
+	{
+		int result = 1;
+		for (int i = 1; i < 10; ++i)
+		{
+			result *= i;
+			cout << result << endl;
+		}
+	}
+	*/
+
+	// 2-9
+	/*
+	{
+		int BigNum = 0;
+		int SmallNum = 0;
+		cout << "Input first Num : ";
+		cin >> BigNum;
+		cout << "Input Second Num : ";
+		cin >> SmallNum;
+
+		if (BigNum < SmallNum)
+		{
+			int tmp = BigNum;
+			BigNum = SmallNum;
+			SmallNum = BigNum;
+		}
+
+		cout << BigNum << " is bigger than " << SmallNum << endl;
+	}
+	*/
+	
 
 	return 0;
 }
